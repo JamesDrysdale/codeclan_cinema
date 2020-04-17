@@ -11,4 +11,4 @@ class Ticket
     end
 
 
-end 
+end
