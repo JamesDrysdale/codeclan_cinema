@@ -28,7 +28,17 @@ class Customer
   end
 
   # READ
+  def self.all()
+    sql = "SELECT * FROM customers"
+    customers = SqlRunner.run(sql)
+    return Customer.map_items(customers)
+  end
 
+
+  def self.map_items(customer_data)
+    result = customer_data.map { |customer| Customer.new(customer) }
+    return result
+  end
 
   # UPDATE
 
