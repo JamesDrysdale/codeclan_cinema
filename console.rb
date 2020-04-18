@@ -4,14 +4,17 @@ require_relative( 'models/ticket' )
 
 require( 'pry' )
 
+Customer.delete_all()
+Film.delete_all()
+Ticket.delete_all()
 
 customer1 = Customer.new({ 'name' => 'Boaby', 'funds' => '30' })
 customer2 = Customer.new({ 'name' => 'Mary', 'funds' => '120' })
 customer3 = Customer.new({ 'name' => 'Schubert', 'funds' => '55' })
 
 customer1.save()
-customer1.save()
-customer1.save()
+customer2.save()
+customer3.save()
 
 film1 = Film.new({ 'title' => 'The Voynich Conspiracy', 'price' => '10' })
 film2 = Film.new({ 'title' => 'Bob\'s Your Oyster', 'price' => '12' })
@@ -26,8 +29,8 @@ ticket2 = Ticket.new({ 'customer_id' => customer2.id, 'film_id' => film2.id })
 ticket3 = Ticket.new({ 'customer_id' => customer3.id, 'film_id' => film3.id })
 
 ticket1.save()
-ticket1.save()
-ticket1.save()
+ticket2.save()
+ticket3.save()
 
 
 
