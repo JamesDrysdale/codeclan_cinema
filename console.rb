@@ -34,11 +34,5 @@ ticket3.save()
 
 
 
-
-
-
-
-
-
 binding.pry
 nil
